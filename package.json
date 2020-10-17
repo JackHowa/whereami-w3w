@@ -2,7 +2,7 @@
   "name": "where-w3w",
   "version": "1.0.0",
   "author": "jackhowa",
-  "license": "SEE LICENSE IN",
+  "license": "MIT",
   "private": false,
   "main": "src/App.js",
   "scripts": {

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom";
 import DisplayLocationArea from "./DisplayLocationArea";
 import AskToShowLocation from "./AskToShowLocation";
 import ShowLocationContext from "./ShowLocationContext";

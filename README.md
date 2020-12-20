@@ -15,3 +15,4 @@
 - Geolocation
 - Async/Await
 - Fetch
+- CSS Modules

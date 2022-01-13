@@ -1,0 +1,53 @@
+---
+# seo involvement
+metaDescription: "Using the What3Words API and 11ty, this site renders your What3Words address as a SEO friendly URL. It uses 11ty, netlify, and serverless builder. Using the What3Worlds API, this site utilizing styles of Glassmorphism shows you your what3word coordinate upon clicking the checkbox to allow location."
+metaTitle: Where Am I, What3Words?
+metaCanonicalURL: "https://whereami-w3w.netlify.app/"
+---
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
+    <meta name="description" content="{{metaDescription}}"/>
+    {% set css %}
+    {% include "styles.css" %}
+    {% endset %}
+    <style>
+      {{css | cssmin | safe}}
+    </style>
+    <link rel="manifest" href="/manifest.json"/>
+    <link rel="canonical" href="{{metaCanonicalURL}}"/>
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="512x512" href="/images/logo512.png"/>
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/logo192.png"/>
+    <title>{{metaTitle}}</title>
+  </head>
+
+  <body>
+    <main >
+			<div class="app-container">
+				<div class="inner-container">
+					<label>
+						Show Location
+						<input
+							type="checkbox"
+							id="show-location"
+						/>
+					</label>
+					<p id="location-output">Click above to find your three word location</p>
+					</div>
+				</div>
+			</div>
+    </main>
+  </body>
+	{% set js %}
+  	{% include "util.js" %}
+	{% endset %}
+	<script>
+		{{ js | jsmin | safe }}
+	</script>
+
+</html>

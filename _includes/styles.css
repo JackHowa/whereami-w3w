@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(106, 198, 26);
+  background: rgb(136, 182, 96);
   background: -moz-linear-gradient(
     202deg,
     rgba(106, 198, 26, 1) 0%,
@@ -28,4 +28,29 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   overscroll-behavior: none;
+}
+
+.app-container {
+  /* overscroll behavior doesn't work on safari */
+  /* https://caniuse.com/#feat=css-overscroll-behavior */
+  overscroll-behavior: none;
+  margin: 0;
+  padding: 0;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20vw 0 20vw;
+
+  @media (max-width: 800px) {
+    padding: 0 10vw 0 10vw;
+  }
+}
+
+.inner-container {
+  background: linear-gradient(107.18deg,hsla(0,0%,100%,.7) 1.84%,hsla(0,0%,100%,.4));
+  padding: 2vw;
+
+  border-radius: 4px;
+  /* height: 15vh; */
 }

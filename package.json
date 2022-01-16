@@ -3,25 +3,11 @@
   "version": "0.1.0",
   "author": "jackhowa",
   "license": "MIT",
-  "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^0.2.4"
-  },
-  "resolutions": {
-    "cache-base": "4.0.0"
-  },
+  "main": "_site/index.html",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "build:github": "eleventy --output docs"
   },
   "browserslist": {
     "production": [
@@ -34,5 +20,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0"
+  },
+  "dependencies": {
+    "clean-css": "^5.2.2",
+    "terser": "^5.10.0"
   }
 }

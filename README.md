@@ -8,7 +8,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f39ff4a6-e7e1-45a3-8883-bc594218fdb9/deploy-status)](https://app.netlify.com/sites/whereami-w3w/deploys)
 
-## tech
+## v1 tech
 
 - Custom React Hooks
 - React Context

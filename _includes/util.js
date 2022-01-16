@@ -1,7 +1,7 @@
 async function findWhat3Words(position) {
   try {
     const threeWordLocationResponse = await fetch(
-      `https://api.what3words.com/v3/convert-to-3wa?coordinates=${position.coords.latitude}%2C${position.coords.longitude}&key={'2YIQ30MS'}`
+      `https://api.what3words.com/v3/convert-to-3wa?coordinates=${position.coords.latitude}%2C${position.coords.longitude}&key=${'2YIQ30MS'}`
     );
 
     const data = await threeWordLocationResponse.json();
